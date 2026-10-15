@@ -1,0 +1,7 @@
+.tools/
+.env/
+__pycache__/
+.ipynb_checkpoints/
+.env-layout/
+layout/out/work/
+results/extra/*_pex.spice

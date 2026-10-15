@@ -1,0 +1,17 @@
+* gf180mcuC smoke test: inverter VTC + transient FO1 (3.3 V devices)
+.include $PDK_ROOT/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib $PDK_ROOT/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+Vdd vdd 0 3.3
+Vin in 0 pulse(0 3.3 1n 50p 50p 5n 10n)
+XMp out in vdd vdd pfet_03v3 L=0.28u W=2.5u
+XMn out in 0 0 nfet_03v3 L=0.28u W=1.0u
+Cl out 0 5f
+.control
+tran 10p 25n
+meas tran tphl trig v(in) val=1.65 rise=1 targ v(out) val=1.65 fall=1
+meas tran tplh trig v(in) val=1.65 fall=1 targ v(out) val=1.65 rise=1
+meas tran iavg avg i(Vdd) from=0 to=20n
+dc Vin 0 3.3 0.01
+meas dc vm when v(out)=1.65
+.endc
+.end

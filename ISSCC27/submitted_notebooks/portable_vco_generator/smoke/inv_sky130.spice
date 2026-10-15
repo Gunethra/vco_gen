@@ -1,0 +1,16 @@
+* sky130 smoke test: inverter VTC + transient FO1
+.lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+Vdd vdd 0 1.8
+Vin in 0 pulse(0 1.8 1n 50p 50p 5n 10n)
+XMp out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=2.0
+XMn out in 0 0 sky130_fd_pr__nfet_01v8 L=0.15 W=1.0
+Cl out 0 5f
+.control
+tran 10p 25n
+meas tran tphl trig v(in) val=0.9 rise=1 targ v(out) val=0.9 fall=1
+meas tran tplh trig v(in) val=0.9 fall=1 targ v(out) val=0.9 rise=1
+meas tran iavg avg i(Vdd) from=0 to=20n
+dc Vin 0 1.8 0.01
+meas dc vm when v(out)=0.9
+.endc
+.end

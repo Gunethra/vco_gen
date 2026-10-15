@@ -1,0 +1,13 @@
+# Step 1 of 2: simulation / analysis environment (conda-forge).  Step 2 (EDA tools + PDKs) is environment-eda.txt.
+name: vco_sim
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - ngspice=41
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - pyyaml
+  - jupyterlab
+  - ipykernel

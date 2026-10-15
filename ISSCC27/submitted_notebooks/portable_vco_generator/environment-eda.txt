@@ -1,0 +1,7 @@
+# Step 2 of 2: installed INTO the environment from step 1 with
+#   micromamba install -p <env> -c litex-hub -c conda-forge $(grep -v '^#' environment-eda.txt)
+# (A single solve together with step 1 fails on litex-hub's old Qt/KLayout pins, so the install is split.)
+open_pdks.sky130a=1.0.471_0_g97d0844
+open_pdks.gf180mcuc=1.0.471_1_gd8bfd6f
+magic=8.3.464_0_gcb73ebf
+netgen=1.5.272_0_g178af5f

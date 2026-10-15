@@ -1,0 +1,14 @@
+{
+  "pdk": "sky130",
+  "stages": 5,
+  "bbox_um": [
+    0.0,
+    -8.77,
+    104.94,
+    31.4
+  ],
+  "drc_violations": [],
+  "drc_clean": true,
+  "lvs": "Circuits match uniquely.",
+  "lvs_clean": true
+}

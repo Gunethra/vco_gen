@@ -1,0 +1,9 @@
+[submodule "Notebooks/bandgapReferenceCircuit"]
+	path = Notebooks/bandgapReferenceCircuit
+	url = https://github.com/johnkustin/bandgapReferenceCircuit
+[submodule "Notebooks/DAG_Processing_Unit/src/DPU_DAG_Processing_Unit"]
+	path = Notebooks/DAG_Processing_Unit/src/DPU_DAG_Processing_Unit
+	url = https://github.com/nimish15shah/DPU_DAG_Processing_Unit
+[submodule "VLSI26/submitted_notebooks/CABAgent/Layout-ALIGN"]
+	path = VLSI26/accepted_notebooks/CABAgent/CABAgent/Layout-ALIGN
+	url = https://github.com/HUJH511/ALIGN-public.git

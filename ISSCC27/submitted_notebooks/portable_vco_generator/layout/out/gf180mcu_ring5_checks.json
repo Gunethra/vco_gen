@@ -1,0 +1,14 @@
+{
+  "pdk": "gf180mcu",
+  "stages": 5,
+  "bbox_um": [
+    0.0,
+    -9.14,
+    112.56,
+    34.73
+  ],
+  "drc_violations": [],
+  "drc_clean": true,
+  "lvs": "Circuits match uniquely.",
+  "lvs_clean": true
+}
